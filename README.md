@@ -33,6 +33,7 @@ npm install
 ```
 
 5. アプリを起動。
+   ※ユーザはない状態なので、必ずユーザ登録して（Signup）利用する。
 
 ```bash
 npm start
