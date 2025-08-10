@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="nekohubapp-body">
+  <%- include('./header'); %>
+  <div class="container text-center">
+      <h1 class="mb-4 animate__animated animate__fadeInDown d-flex align-items-center justify-content-center ps-0 ms-0">
+        <span class="ms-2"></span>Your Todo List</span>
+        <img src="/images/catA.png" alt="icon" style="height: 120px;">
+      </h1>
+      <form action="/" method="post" class="todoapp-task-input-group animate__animated animate__fadeInUp animate__delay-1s">
+        <div class="input-group">
+          <input type="text" name="add" class="form-control form-control-lg" placeholder="What do you want to do?" required>
+          <button type="submit" class="btn btn-primary btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14z"/>
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+          </button>
+        </div>
+      </form>
+      <div class="todoapp-todo-list">
+        <% for(let todo of todos){ %>
+          <div class="todoapp-todo-item animate__animated animate__fadeInUp d-flex align-items-center justify-content-between">
+            <!-- チェックボックス部分 -->
+            <form action="/todo-app/toggle/<%= todo.id %>" method="post" class="todoapp-checkbox-form">
+              <input type="checkbox" id="chk<%= todo.id %>" name="complete" onchange="this.form.submit()" class="todoapp-checkbox" <%= todo.complete ? 'checked' : '' %> >
+              <label for="chk<%= todo.id %>" class="custom-checkbox"></label>
+            </form>
+
+            <!-- タスクテキスト -->
+            <span class="todoapp-task-text <%= todo.complete ? 'complete' : '' %>">
+              <%= todo.content %>
+            </span>
+
+            <!-- 削除ボタン -->
+            <form action="/todo-app/delete/<%= todo.id %>" method="post" class="todoapp-delete-form">
+              <button type="submit" class="btn btn-danger btn-sm">削除</button>
+            </form>
+          </div>
+        <% } %>
+      </div>  
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

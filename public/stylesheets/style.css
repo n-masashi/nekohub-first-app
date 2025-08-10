@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.parallax {
+    background-color: linear-gradient(135deg, black, #4ba28c);
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+body.nekohubapp-body {
+  background: linear-gradient(135deg, rgb(73, 68, 68), #59dab9);
+  min-height: 100vh;
+  color: #fff;
+  padding-top: 4rem;
+}
+
+.todoapp-task-input-group {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.todoapp-todo-list {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.todoapp-todo-item {
+  background-color: rgba(255,255,255,0.1);
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.todoapp-todo-item:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.todoapp-label {
+  font-weight: 700;
+}
+
+.signpage-auth-background {
+  background: linear-gradient(135deg, rgb(73, 68, 68), #59dab9);
+  min-height: 100vh; 
+  color: white;
+}
+
+.signpage-auth-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.signpage-auth-card {
+  background: linear-gradient(135deg,rgb(73, 68, 68), #59dab9);
+  color: white;
+}
+
+.signpage-auth-card label,
+.signpage-auth-card .form-label,
+.signpage-auth-card p,
+.signpage-auth-card .card-title,
+.signpage-auth-card .card-text {
+  color: white !important; 
+}
+
+.signpage-auth-card input,
+.signpage-auth-card input::placeholder {
+  color: white !important;
+  background-color: transparent; 
+  border-color: #4ba28c;
+}
+
+.signpage-auth-card .btn-dark {
+  background-color: #367c70;
+  border-color: #2f6c63;
+}
+
+.signpage-auth-card .btn-dark:hover {
+  background-color: #2f6c63;
+  border-color: #26534e;
+}
+
+.signpage-auth-background .form-control {
+  background-color: #2c2f33;
+  color: #e0e0e0;        
+  border-color: #444;
+}
+
+.signpage-auth-background .form-control::placeholder {
+  color: #999;
+}
+
+.signpage-auth-background .form-control:focus {
+  background-color: #2c2f33;
+  color: #fff;
+  border-color: #76c7b7; 
+  box-shadow: 0 0 0 0.25rem rgba(118, 199, 183, 0.5);
+}
+
+.dash_card {
+  background-color: #1cdd93; 
+  color: #222;
+  border-radius: 0.5rem;
+}
+
+.btn-custom {
+  background-color: #38b2ac;
+  color: white;
+}
+
+.btn-custom:hover {
+  background-color: #2c7a7b;
+  color: white;
+}
+
+
+.todoapp-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #59dab9;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+.todoapp-checkbox:checked + .custom-checkbox::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid #59dab9;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+.complete {
+  text-decoration: line-through;
+  color: #e9dddd;
+}
+
+.customcard-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
